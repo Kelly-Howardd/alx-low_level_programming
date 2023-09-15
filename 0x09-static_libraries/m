@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Enter Prototype"
+read proto
+echo $proto >> main.h
+echo ------------------------------------------------------
+cat main.h
+echo ------------------------------------------------------

@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Enter fileName"
+read fileName
+echo "Enter commit"
+read commit
+echo "$commit" >> README.md
+git add README.md "$fileName" main.h
+git commit -m "$commit"
+git push
