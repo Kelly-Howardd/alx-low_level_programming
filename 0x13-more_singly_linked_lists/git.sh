@@ -11,7 +11,7 @@
 file_array=($(ls))
 
 # Start a timer for 45 minutes
-end_time=$((SECONDS + 2700)) # 2700 seconds = 45 minutes
+end_time=$((SECONDS + 300)) # 300 seconds = 5 minutes
 
 while [ $SECONDS -lt $end_time ]; do
     # Select a random file from the array
@@ -28,10 +28,10 @@ while [ $SECONDS -lt $end_time ]; do
     file_array=("${file_array[@]}")
     
     # Sleep for a random interval between 30 and 120 seconds
-    sleep_duration=$((RANDOM % 91 + 30))
+    sleep_duration=$((RANDOM % 8 + 5))
     sleep $sleep_duration
 done
 
 # End of the script
-echo "Script completed after 45 minutes."
+echo "Script completed after 5 minutes."
 
